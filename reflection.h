@@ -9,6 +9,14 @@ std::string str_render(unsigned char val)
 {
   return std::to_string(val);
 }
+std::string str_render(short val)
+{
+  return std::to_string(val);
+}
+std::string str_render(unsigned short val)
+{
+  return std::to_string(val);
+}
 std::string str_render(int val)
 {
   return std::to_string(val);
