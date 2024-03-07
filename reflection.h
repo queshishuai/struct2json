@@ -49,7 +49,7 @@ std::string str_render(T &arr)
   return str;
 } 
 
-#define COUT(o,mem) \
+#define FUNC(o,mem) \
   s.push_back('"'); \
   s.append(#mem); \
   s.push_back('"'); \
@@ -57,7 +57,7 @@ std::string str_render(T &arr)
   s.append(str_render(o.mem)); \
   s.push_back(',');
 
-#define FUNC1(o,mem) COUT(o,mem) 
+#define FUNC1(o,mem) FUNC(o,mem) 
 #define FUNC2(o,v1,v2) FUNC1(o,v1) FUNC1(o,v2)
 #define FUNC3(o,v1,v2,v3) FUNC2(o,v1,v2) FUNC1(o,v3)
 #define FUNC4(o,v1,v2,v3,v4) FUNC3(o,v1,v2,v3) FUNC1(o,v4)
