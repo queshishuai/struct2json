@@ -20,7 +20,15 @@ typedef struct
   mac1 mc[2];
 }mac;
 REFLECTION(mac,c,a,b,d,mc);
-
+//write to file
+void write_txt(std::string &str)
+{
+  std::string write_file_name = {"./file.json"};
+  ofstream os;
+  os.open(write_file_name,ios::app);
+  os << str;
+  os.close();
+}
 int main()
 {
   mac ma;
