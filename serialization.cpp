@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "reflection.h"
+#include "pretty_json.h"
 
 using namespace std;
 typedef struct
@@ -42,5 +43,6 @@ int main()
   std::string str;
   to_json(ma,str);
   cout << str << endl;
+  pretty_json(str);
   return 0;
 }
